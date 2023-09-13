@@ -1,0 +1,55 @@
+.lesson-container > p {
+  margin: 5px;
+}
+
+.lesson-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: 2px solid var(--border-color);
+  color: var(--font-color);
+  transition: box-shadow 0.2s;
+}
+.has-link{
+  cursor: pointer;
+}
+
+.lesson-container.highlighted {
+  border-color: white;
+}
+
+.lesson-container.lecture {
+  border-color: var(--lecture-color);
+}
+.lesson-container.lecture:hover {
+  box-shadow:0 0 20px var(--lecture-color);
+}
+
+.lesson-container.practice {
+  border-color: var(--practice-color);
+}
+.lesson-container.practice:hover {
+  box-shadow:0 0 20px var(--practice-color);
+}
+
+.lesson-container.laboratory {
+  border-color: var(--laboratory-color);
+}
+.lesson-container.laboratory:hover {
+  box-shadow:0 0 20px var(--laboratory-color);
+}
+
+.lesson-name {
+  font-weight: bold;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.lesson-teacher {
+  color: var(--font-dim-color);
+}

@@ -1,0 +1,11 @@
+:root {
+  --ds: rgb(0, 0, 0);
+}
+
+.schedule--day-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px; 
+}

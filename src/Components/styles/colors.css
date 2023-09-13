@@ -1,0 +1,9 @@
+:root {
+  --background-color: rgb(15, 15, 15);
+  --font-color: white;
+  --font-dim-color: rgb(178, 178, 178);
+  --border-color: rgb(84, 83, 83);
+  --lecture-color: rgb(255, 0, 132);
+  --practice-color: rgb(255, 179, 0);
+  --laboratory-color: rgb(115, 211, 31);
+}
