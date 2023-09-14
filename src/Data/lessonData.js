@@ -122,10 +122,10 @@ export default [
     name: 'Психологія',
     lecture : {
       teacher: 'Волянюк Н. Ю.',
-      link: 'https://us04web.zoom.us/j/9635300619?pwd=Nno3Q0Qxb2JMSWk5Z3hkSnFSK3RGUT09'
     },
     practice: {
       teacher: 'Оніпко З. С.',
+      link: 'https://us04web.zoom.us/j/9635300619?pwd=Nno3Q0Qxb2JMSWk5Z3hkSnFSK3RGUT09'
     }
   },
   {
