@@ -74,7 +74,7 @@ export default [
     name: 'Практичний курс іноземної мови. Частина 2',
     lecture : {
       teacher: 'Амерідзе О. С.',
-      link: 'https://us06web.zoom.us/j/78443511940?pwd=Jkp7DuCpoKfKe1MlOVGr9U4XJ1FNdk.1'
+      link: 'https://us05web.zoom.us/j/5079965781?pwd=RnNacjJTN0Jtd2FBaElySkpLWXhodz09'
     },
     practice: {
       teacher: '',

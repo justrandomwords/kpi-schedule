@@ -38,35 +38,38 @@ function GetCurrentLessonInfo(lessonType, lessonData) {
   return { teacher: currentTeacher, link: currentLink}
 }
 
-export default function DaySchedule(index, lessonSchedule) {
+export default function DaySchedule(props) {
   const todayDayOfWeek = new Date(Date.now()).getDay() - 1;
-  const isSameDayOfWeek = todayDayOfWeek === index;
-  console.log(isSameDayOfWeek);
+  const isSameDayOfWeek = todayDayOfWeek === props.index;
 
   let schedule = [];
 
-  schedule.push(<div className='schedule--day-name'>{WordDaysOfWeek[index]}</div>)
+  schedule.push(<div className='schedule--day-name'>{WordDaysOfWeek[props.index]}</div>)
   for (let i = 1; i < 6; i++) {
     schedule.push(<LessonCard/>)
   }
 
-  if (lessonSchedule[index].length === 0) {
+  if (props.lessonSchedule[props.index].length === 0) {
     return schedule;
   }
   
-  lessonSchedule[index].forEach(lesson => {
+  props.lessonSchedule[props.index].forEach(lesson => {
     const lessonInfo = GetLessonInfo(lesson.id);
-    const current = GetCurrentLessonInfo(lesson.type, lessonData[lesson.id]);
+    const currentLesson = GetCurrentLessonInfo(lesson.type, lessonData[lesson.id]);
     
     lesson.number && schedule.splice(lesson.number, 1, 
       <LessonCard
         name={lessonInfo.name}
-        teacher={current.teacher}
+        teacher={currentLesson.teacher}
         type={lesson.type}
-        lessonLink={current.link}
+        lessonLink={currentLesson.link}
       />
     )
   })
 
-  return schedule;
+  return (
+    <>
+      {schedule}
+    </>
+  )
 }

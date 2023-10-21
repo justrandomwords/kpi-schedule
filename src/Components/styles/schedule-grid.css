@@ -1,43 +1,130 @@
+.schedule-container {
+  transition: all 0.5s;
+  padding: 0 10px 0 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.schedule-container.full {
+  padding: 0 10px 10px 0;
+}
+
 .schedule--grid {
-  display: grid;
+  display: flex;
   grid-template-columns: 40px repeat(5, 1fr) 40px;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 10px 0px;
-  height: 100%;
   width: 100%;
+  height: 100%;
+
+  transition: all 0.5s;
 }
 
 .schedule--column {
   height: 100%;
-  width: 100%;
   display: grid;
-  grid-template-rows: 40px repeat(5, 1fr);
+  /* grid-template-rows: 40px repeat(5, minmax(120px, 1fr)); js*/
   gap: 10px;
 }
-
-.schedule--lesson-time {
+.schedule--column.lesson {
+  flex: 1;
+}
+.schedule--column.time-container {
+  width: 130px;
+  transition: all 0.5s;
+}
+.schedule--column.time-container > * {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: rotate(-90deg);
-  font-size: 20px;
+  transform: rotate(0deg);
+  font-size: 20em;
   font-weight: bold;
+
+  transition: all 0.5s;
+} 
+.schedule--column.time-container.full {
+  width: 40px;
+}
+.schedule--column.time-container.full > * {
+  transform: rotate(-90deg);
 }
 
-.schedule--week {
+
+.schedule--week-name-container {
+  display: flex;
+  flex-direction: column;
+  grid-template-rows: 40px s1fr;
+  width: 40px;
+  height: 100%;
+}
+
+.schedule--week-name {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 100%;
   text-wrap: nowrap;
-  font-size: 30px;
+  font-size: 30em;
   font-weight: bold;
   cursor: pointer;
-}
-.schedule--week > p {
   user-select: none;
-  transform: rotate(90deg);
+  margin: 0;
+
+  transition: all 0.5s;
 }
+
+.schedule--week-name.right > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-lr;
+
+  transition: all 0.5s;
+}
+.schedule--week-name.right.hidden {
+  transform: translatex(30vh);
+}
+.schedule--week-name.right.hidden > p{
+  transform: translatex(30vh);
+}
+
+.schedule--week-name.top {
+  font-size: 40em;
+  height: 60px;
+  margin: 10px 0 15px 0;
+}
+.schedule--week-name.top > p {
+  align-items: end;
+}
+.schedule--week-name.top.hidden {
+  transform: translatey(-100px);
+  height: 0;
+  margin: 0;
+}
+
+.schedule--size-button {
+  outline: transparent;
+  border: none;
+  background-color: transparent;
+  padding: 8px;
+  cursor: pointer;
+
+  transition: all 0.2s;
+}
+.schedule--size-button:hover {
+  opacity: 1;
+}
+.schedule--size-button > svg {
+  width: 100%;
+  height: 100%;
+  fill: white;
+
+  transition: all 0.5s;
+}
+
+.schedule--size-button:hover > svg {
+  transform-origin: center;
+  transform: rotate(180deg);
+} 
