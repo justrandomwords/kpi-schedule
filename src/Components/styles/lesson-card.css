@@ -47,10 +47,10 @@
 
 .lesson-name {
   font-weight: bold;
-  font-size: 16em;
+  font-size: 1rem;
 }
 
 .lesson-teacher {
   color: var(--font-dim-color);
-  font-size: 14em;
+  font-size: 0.9rem;
 }

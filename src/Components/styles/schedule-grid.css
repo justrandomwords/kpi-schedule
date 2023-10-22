@@ -1,8 +1,9 @@
 .schedule-container {
-  transition: all 0.5s;
   padding: 0 10px 0 20px;
   height: 100%;
   box-sizing: border-box;
+  
+  transition: padding 0.5s;
 }
 
 .schedule-container.full {
@@ -17,8 +18,6 @@
   gap: 10px;
   width: 100%;
   height: 100%;
-
-  transition: all 0.5s;
 }
 
 .schedule--column {
@@ -32,21 +31,22 @@
 }
 .schedule--column.time-container {
   width: 130px;
-  transition: all 0.5s;
+  transition: width 0.5s;
 }
+.schedule--column.time-container.full {
+  width: 40px;
+}
+
 .schedule--column.time-container > * {
   display: flex;
   justify-content: center;
   align-items: center;
   transform: rotate(0deg);
-  font-size: 20em;
+  font-size: 1.25rem;
   font-weight: bold;
 
-  transition: all 0.5s;
+  transition: transform 0.5s;
 } 
-.schedule--column.time-container.full {
-  width: 40px;
-}
 .schedule--column.time-container.full > * {
   transform: rotate(-90deg);
 }
@@ -66,13 +66,16 @@
   align-items: center;
   height: 100%;
   text-wrap: nowrap;
-  font-size: 30em;
+  font-size: 1.9rem;
   font-weight: bold;
   cursor: pointer;
   user-select: none;
   margin: 0;
 
-  transition: all 0.5s;
+  transition: 
+    transform 0.5s, 
+    height 0.5s,
+    margin 0.5s;
 }
 
 .schedule--week-name.right > p {
@@ -80,8 +83,6 @@
   justify-content: center;
   align-items: center;
   writing-mode: vertical-lr;
-
-  transition: all 0.5s;
 }
 .schedule--week-name.right.hidden {
   transform: translatex(30vh);
@@ -91,7 +92,7 @@
 }
 
 .schedule--week-name.top {
-  font-size: 40em;
+  font-size: 2.5rem;
   height: 60px;
   margin: 10px 0 15px 0;
 }
@@ -110,8 +111,6 @@
   background-color: transparent;
   padding: 8px;
   cursor: pointer;
-
-  transition: all 0.2s;
 }
 
 .schedule--size-button > svg {
@@ -119,7 +118,7 @@
   height: 100%;
   fill: white;
 
-  transition: all 0.5s;
+  transition: transform 0.5s;
 }
 
 .schedule--size-button:hover > svg {
@@ -129,7 +128,6 @@
 .schedule--size-button > svg > path {
   transform-origin: center;
   transform-box: fill-box;
-  transition: all 0.5s;
   box-sizing: border-box;
   animation: toFull 0s 0.2s both;
 }
