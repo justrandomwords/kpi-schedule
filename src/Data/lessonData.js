@@ -4,6 +4,7 @@ export default [
   {
     id: LessonsNames.Programing,
     name: 'Технології розроблення програмного забезпечення',
+    short_name: 'Прога',
     lecture : {
       teacher: 'Проскуренко Д. М.',
       link: 'https://zoom.us/j/5865682798?pwd=enZzaVBkR0ZKRDFZYTQranJsN2JSZz09'
@@ -16,6 +17,7 @@ export default [
   {
     id: LessonsNames.Math,
     name: 'Вища математика. Частина 3. Математичний аналіз',
+    short_name: 'Виш мат',
     lecture : {
       teacher: 'Суліма О. В.',
       link: 'https://us04web.zoom.us/j/7607703944?pwd=OVAyZ2N1aDViTkFVVVFqNnZZa1NPZz09'
@@ -44,6 +46,7 @@ export default [
   {
     id: LessonsNames.Physics,
     name: 'Додаткові розділи фізики',
+    short_name: 'Фізика',
     lecture : {
       teacher: 'Аврутов В. В.',
       link: 'https://us04web.zoom.us/j/79338455238?pwd=AnLdhYROh41MF2bnmoUy1ozMdAv21a.1'
@@ -56,6 +59,7 @@ export default [
   {
     id: LessonsNames.Metrology,
     name: 'Метрологія та стандартизація',
+    short_name: 'Метрологія',
     lecture : {
       teacher: 'Філіппова М. В.',
       link: 'https://us02web.zoom.us/j/81058767361?pwd=RW5qaEZ2MnJmSEFrTzRZTHRQREkvUT09'
@@ -72,6 +76,7 @@ export default [
   {
     id: LessonsNames.English,
     name: 'Практичний курс іноземної мови. Частина 2',
+    short_name: 'Інгліш',
     lecture : {
       teacher: 'Амерідзе О. С.',
       link: 'https://us05web.zoom.us/j/5079965781?pwd=RnNacjJTN0Jtd2FBaElySkpLWXhodz09'
@@ -84,6 +89,7 @@ export default [
   {
     id: LessonsNames.Philosophy,
     name: 'Вступ до філософії',
+    short_name: 'Філософія',
     lecture : {
       teacher: ' Анацька Н. В.',
       link: 'https://zoom.us/j/5085474915?pwd=SmdNNXpqTzVyay9UZHBwb0xPYzFFZz09'
@@ -97,6 +103,7 @@ export default [
   {
     id: LessonsNames.PoliticalParticipation,
     name: 'Політична участь та громадянська відповідальність: європейські практики',
+    short_name: 'Політ участь',
     lecture : {
       teacher: 'Шкурат І. В.',
       link: 'https://zoom.us/j/5439919039?pwd=Um8wWHV4ZjZpallCWkpVQ08wZGNzdz09'
@@ -108,6 +115,7 @@ export default [
   {
     id: LessonsNames.SmartCities,
     name: 'Економічна психологія, Соціальна психологія, Розумні міста',
+    short_name: 'Розумні міста',
     lecture : {
       teacher: 'Чукут С. А.',
       link: 'https://zoom.us/j/5439919039?pwd=Um8wWHV4ZjZpallCWkpVQ08wZGNzdz09'
@@ -131,6 +139,7 @@ export default [
   {
     id: LessonsNames.DataProtection,
     name: 'Захист персональних даних: стандарти ЄС та Ради Європи',
+    short_name: 'Захист даних',
     lecture : {
     },
     practice: {

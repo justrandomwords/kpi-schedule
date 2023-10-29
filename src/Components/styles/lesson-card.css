@@ -1,56 +1,92 @@
-.lesson-container > p {
+.lesson-container > * {
   margin: 5px;
 }
 
 .lesson-container {
+  --_lesson-color: var(--lesson-color, transparent);
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 5px;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   padding: 5px 15px;
   border-radius: 10px;
-  border: 2px solid var(--border-color);
+  background-color: var(--background-card-color);
   color: var(--font-color);
+  overflow: hidden;
   transition: box-shadow 0.2s;
-  font-size: em;
-}
-.has-link{
-  cursor: pointer;
+  container-type: inline-size;
+
+  &.lecture {
+    --lesson-color: var(--lecture-color);
+  }
+  &.practice {
+    --lesson-color: var(--practice-color);
+  }
+  &.laboratory {
+    --lesson-color: var(--laboratory-color);
+  }
+
+  &.highlighted {
+    border-color: white;
+  }
+
+  &.has-link{
+    cursor: pointer;
+  }
+
+  .lesson-statusbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .lesson-status {
+      font-size: 0.7rem;
+      font-weight: bold;
+
+      .lesson-status-dot {
+        color: var(--online-color);
+      }
+    }
+  
+    .lesson-type {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: bold;
+      background-color: var(--_lesson-color);
+      color: var(--background-card-color);
+      border-radius: 100px;
+      padding: 5px 7px;
+    }
+  }
+
+  .lesson-name {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    max-height: 2.2em;
+    overflow: hidden;
+  }
+  
+  .lesson-teacher {
+    color: var(--font-dim-color);
+    font-size: 0.9rem;
+  }
+
+  .text-container {
+    display: grid;
+    gap: 10px;
+  }
+
+  @container (max-width: 100px) {
+    .lesson-teacher {
+      display: none
+    }
+  }
 }
 
-.lesson-container.highlighted {
-  border-color: white;
-}
-
-.lesson-container.lecture {
-  border-color: var(--lecture-color);
-}
-.lesson-container.lecture:hover {
-  box-shadow:0 0 20px var(--lecture-color);
-}
-
-.lesson-container.practice {
-  border-color: var(--practice-color);
-}
-.lesson-container.practice:hover {
-  box-shadow:0 0 20px var(--practice-color);
-}
-
-.lesson-container.laboratory {
-  border-color: var(--laboratory-color);
-}
-.lesson-container.laboratory:hover {
-  box-shadow:0 0 20px var(--laboratory-color);
-}
-
-.lesson-name {
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.lesson-teacher {
-  color: var(--font-dim-color);
-  font-size: 0.9rem;
+.lesson-container:hover {
+  box-shadow:0 0 0 2px var(--_lesson-color);
 }

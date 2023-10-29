@@ -2,11 +2,11 @@ import { NumberDaysOfWeek } from '../Enums/DaysOfWeek';
 import './styles/schedule-grid.css'
 import './styles/day-schedule.css'
 import DaySchedule from './DaySchedule';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function ScheduleGrid(props) {
   const [isFullSize, setIsFullSize] = useState(localStorage.getItem('isFullScreen') || false);
-  const [lessonContainerHeight, setLessonContainerHeight] = useState(110)
+  const [lessonContainerHeight, setLessonContainerHeight] = useState(20)
 
   const columnStyle = {
     gridTemplateRows: `40px repeat(5, minmax(${lessonContainerHeight}px, 1fr))`

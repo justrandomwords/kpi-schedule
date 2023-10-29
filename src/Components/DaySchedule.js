@@ -3,8 +3,9 @@ import lessonData from '../Data/lessonData';
 import lessonsType from '../Enums/lessonsType';
 import { WordDaysOfWeek } from '../Enums/DaysOfWeek';
 import './styles/day-schedule.css'
+import { useEffect } from 'react';
 
-function GetLessonInfo(lessonID) {
+function getLessonInfo(lessonID) {
   let lessonInfo;
 
   lessonData.forEach(lessonData => {
@@ -17,7 +18,7 @@ function GetLessonInfo(lessonID) {
   return lessonInfo
 }
 
-function GetCurrentLessonInfo(lessonType, lessonData) {
+function getCurrentLessonInfo(lessonType, lessonData) {
   let currentTeacher;
   let currentLink = '';
 
@@ -38,6 +39,10 @@ function GetCurrentLessonInfo(lessonType, lessonData) {
   return { teacher: currentTeacher, link: currentLink}
 }
 
+function isLessonRunning(week, day) {
+  
+}
+
 export default function DaySchedule(props) {
   const todayDayOfWeek = new Date(Date.now()).getDay() - 1;
   const isSameDayOfWeek = todayDayOfWeek === props.index;
@@ -54,11 +59,12 @@ export default function DaySchedule(props) {
   }
   
   props.lessonSchedule[props.index].forEach(lesson => {
-    const lessonInfo = GetLessonInfo(lesson.id);
-    const currentLesson = GetCurrentLessonInfo(lesson.type, lessonData[lesson.id]);
+    const lessonInfo = getLessonInfo(lesson.id);
+    const currentLesson = getCurrentLessonInfo(lesson.type, lessonData[lesson.id]);
     
     lesson.number && schedule.splice(lesson.number, 1, 
       <LessonCard
+        isActive={true}
         name={lessonInfo.name}
         teacher={currentLesson.teacher}
         type={lesson.type}
@@ -68,8 +74,6 @@ export default function DaySchedule(props) {
   })
 
   return (
-    <>
-      {schedule}
-    </>
+    <>{schedule}</>
   )
 }
