@@ -4,6 +4,7 @@
 
 .lesson-container {
   --_lesson-color: var(--lesson-color, transparent);
+  --_active-background-color: var(--lesson-color, var(--card-background-color));
 
   display: flex;
   flex-direction: column;
@@ -13,11 +14,25 @@
   box-sizing: border-box;
   padding: 5px 15px;
   border-radius: 10px;
-  background-color: var(--background-card-color);
-  color: var(--font-color);
+  background: var(--card-background-color);
+  color: var(--card-font-color);
   overflow: hidden;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, scale 0.2s;
   container-type: inline-size;
+
+  &.active {
+    background: var(--_active-background-color);
+    color: var(--card-active-font-color);
+    .lesson-statusbar {
+      .lesson-type {
+        color: var(--card-active-type-font-color);
+        background-color: var(--card-active-type-background-color);
+      }
+    }
+    .lesson-teacher {
+      color: var(--card-active-teacher-font-color);
+    }
+  }
 
   &.lecture {
     --lesson-color: var(--lecture-color);
@@ -45,10 +60,6 @@
     .lesson-status {
       font-size: 0.7rem;
       font-weight: bold;
-
-      .lesson-status-dot {
-        color: var(--online-color);
-      }
     }
   
     .lesson-type {
@@ -56,7 +67,7 @@
       font-size: 0.7rem;
       font-weight: bold;
       background-color: var(--_lesson-color);
-      color: var(--background-card-color);
+      color: var(--card-type-font-color);
       border-radius: 100px;
       padding: 5px 7px;
     }
@@ -71,7 +82,7 @@
   }
   
   .lesson-teacher {
-    color: var(--font-dim-color);
+    color: var(--card-teacher-font-color);
     font-size: 0.9rem;
   }
 
@@ -87,6 +98,10 @@
   }
 }
 
-.lesson-container:hover {
-  box-shadow:0 0 0 2px var(--_lesson-color);
+.lesson-container.has-lesson:hover {
+  box-shadow:
+  0 0 0 2px var(--_lesson-color),
+  0 0 var(--blur-glow-card-lesson) var(--strength-glow-card-lesson) var(--_lesson-color);
+  scale: 1.05;
+  z-index: 1;
 }

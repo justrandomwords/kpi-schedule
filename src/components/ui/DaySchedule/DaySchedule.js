@@ -1,9 +1,8 @@
-import LessonCard from '../Components/LessonCard';
-import lessonData from '../Data/lessonData';
-import lessonsType from '../Enums/lessonsType';
-import { WordDaysOfWeek } from '../Enums/DaysOfWeek';
-import './styles/day-schedule.css'
-import { useEffect } from 'react';
+import LessonCard from '../LessonCard/LessonCard';
+import lessonData from '../../../data/lessonData';
+import lessonsType from '../../../enums/lessonsType';
+import { WordDaysOfWeek } from '../../../enums/DaysOfWeek';
+import './day-schedule.css'
 
 function getLessonInfo(lessonID) {
   let lessonInfo;
@@ -64,7 +63,7 @@ export default function DaySchedule(props) {
     
     lesson.number && schedule.splice(lesson.number, 1, 
       <LessonCard
-        isActive={true}
+        active={lesson.active}
         name={lessonInfo.name}
         teacher={currentLesson.teacher}
         type={lesson.type}

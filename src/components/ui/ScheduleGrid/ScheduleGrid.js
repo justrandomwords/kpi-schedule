@@ -1,11 +1,10 @@
-import { NumberDaysOfWeek } from '../Enums/DaysOfWeek';
-import './styles/schedule-grid.css'
-import './styles/day-schedule.css'
-import DaySchedule from './DaySchedule';
-import { useEffect, useState } from 'react';
+import { NumberDaysOfWeek } from '../../../enums/DaysOfWeek';
+import './schedule-grid.css'
+import DaySchedule from '../DaySchedule/DaySchedule';
+import { useState } from 'react';
 
 export default function ScheduleGrid(props) {
-  const [isFullSize, setIsFullSize] = useState(localStorage.getItem('isFullScreen') || false);
+  const [isFullSize, setIsFullSize] = useState(JSON.parse(localStorage.getItem('isFullScreen')) || false);
   const [lessonContainerHeight, setLessonContainerHeight] = useState(20)
 
   const columnStyle = {

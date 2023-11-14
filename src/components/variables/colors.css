@@ -1,0 +1,33 @@
+:root {
+  --background-color: rgb(15, 15, 15);
+  --background-additional-color: rgb(23, 23, 23);
+  --font-color: rgb(255, 255, 255);
+  --font-dim-color: rgb(178, 178, 178);
+  --border-color: rgb(84, 83, 83);
+  --lecture-color: rgb(255, 60, 95);
+  --practice-color: rgb(255, 183, 74);
+  --laboratory-color: rgb(44, 179, 255);
+  --online-color: rgb(0, 184, 0);
+
+
+  --settings-background-color: var(--background-additional-color);
+  --settings-font-color: var(--font-color);
+  --exit-icon-color: var(--font-color);
+  --exit-highlighted-icon-color: red;
+
+  --select-background-color: var(--background-additional-color);
+
+  --menu-background-color: var(--background-additional-color);
+
+  --zoom-icon-color: var(--font-color);
+
+  --card-background-color: var(--background-additional-color);
+  --card-font-color: var(--font-color);
+  --card-teacher-font-color: var(--font-dim-color);
+  --card-type-font-color: var(--background-additional-color);
+  
+  --card-active-font-color: var(--background-additional-color);
+  --card-active-teacher-font-color: var(--background-additional-color);
+  --card-active-type-font-color: var(--font-color);
+  --card-active-type-background-color: var(--background-additional-color);
+}

@@ -1,0 +1,23 @@
+.menu-button {
+  background-color: transparent;
+  border: transparent;
+  padding: 12px;
+  transition: transform 0.5s;
+
+  .button-icon {
+    width: 100%;
+  }
+
+  &.has-event {
+    cursor: pointer;
+  }
+
+  &.out {
+    transform: rotate(180deg);
+    opacity: 0;
+    transition: 0.3s;
+  }
+  &.out:hover {
+    opacity: 1;
+  }
+}

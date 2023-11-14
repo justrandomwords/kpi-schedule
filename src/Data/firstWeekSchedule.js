@@ -1,5 +1,5 @@
-import LessonsNames from "../Enums/LessonsNames"
-import lessonType from "../Enums/lessonsType"
+import LessonsNames from "../enums/LessonsNames"
+import lessonType from "../enums/lessonsType"
 
 export default [
   [

@@ -1,4 +1,4 @@
-import LessonsNames from "../Enums/LessonsNames"
+import LessonsNames from "../enums/LessonsNames"
 
 export default [
   {
@@ -104,6 +104,7 @@ export default [
     id: LessonsNames.PoliticalParticipation,
     name: 'Політична участь та громадянська відповідальність: європейські практики',
     short_name: 'Політ участь',
+    is_optional: true,
     lecture : {
       teacher: 'Шкурат І. В.',
       link: 'https://zoom.us/j/5439919039?pwd=Um8wWHV4ZjZpallCWkpVQ08wZGNzdz09'
@@ -116,6 +117,7 @@ export default [
     id: LessonsNames.SmartCities,
     name: 'Економічна психологія, Соціальна психологія, Розумні міста',
     short_name: 'Розумні міста',
+    is_optional: true,
     lecture : {
       teacher: 'Чукут С. А.',
       link: 'https://zoom.us/j/5439919039?pwd=Um8wWHV4ZjZpallCWkpVQ08wZGNzdz09'
@@ -128,6 +130,7 @@ export default [
   {
     id: LessonsNames.Psychology,
     name: 'Психологія',
+    is_optional: true,
     lecture : {
       teacher: 'Волянюк Н. Ю.',
     },
@@ -140,6 +143,7 @@ export default [
     id: LessonsNames.DataProtection,
     name: 'Захист персональних даних: стандарти ЄС та Ради Європи',
     short_name: 'Захист даних',
+    is_optional: true,
     lecture : {
     },
     practice: {
