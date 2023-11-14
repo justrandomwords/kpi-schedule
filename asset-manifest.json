@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/kpi-schedule/static/css/main.460e1087.css",
-    "main.js": "/kpi-schedule/static/js/main.70f5c07a.js",
+    "main.css": "/kpi-schedule/static/css/main.a79eafb6.css",
+    "main.js": "/kpi-schedule/static/js/main.4adf26a4.js",
     "static/js/787.2b2fdbd7.chunk.js": "/kpi-schedule/static/js/787.2b2fdbd7.chunk.js",
     "static/media/settings.svg": "/kpi-schedule/static/media/settings.39d675ba3434b7f4caca243f45169592.svg",
     "index.html": "/kpi-schedule/index.html",
     "static/media/angle-left.svg": "/kpi-schedule/static/media/angle-left.a8bfbc974f14350d608dca060eaf0468.svg",
-    "main.460e1087.css.map": "/kpi-schedule/static/css/main.460e1087.css.map",
-    "main.70f5c07a.js.map": "/kpi-schedule/static/js/main.70f5c07a.js.map",
+    "static/media/cross-small.svg": "/kpi-schedule/static/media/cross-small.c4a2d4e117837420e42bdfa907428d90.svg",
+    "main.a79eafb6.css.map": "/kpi-schedule/static/css/main.a79eafb6.css.map",
+    "main.4adf26a4.js.map": "/kpi-schedule/static/js/main.4adf26a4.js.map",
     "787.2b2fdbd7.chunk.js.map": "/kpi-schedule/static/js/787.2b2fdbd7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.460e1087.css",
-    "static/js/main.70f5c07a.js"
+    "static/css/main.a79eafb6.css",
+    "static/js/main.4adf26a4.js"
   ]
 }
