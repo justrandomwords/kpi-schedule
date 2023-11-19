@@ -8,7 +8,7 @@ function getLessonInfo(lessonID) {
   let lessonInfo;
 
   lessonData.forEach(lessonData => {
-    if (lessonData.id == lessonID) {
+    if (lessonData.id === lessonID) {
       lessonInfo = lessonData;
       return
     }
@@ -34,18 +34,15 @@ function getCurrentLessonInfo(lessonType, lessonData) {
       currentTeacher = lessonData.laboratory.teacher !== '' ? lessonData.laboratory.teacher : lessonData.lecture.teacher
       currentLink = lessonData.laboratory.link !== '' ? lessonData.laboratory.link : lessonData.lecture.link;
       break;
+    default:
+      break;
   }
+
   return { teacher: currentTeacher, link: currentLink}
 }
 
-function isLessonRunning(week, day) {
-  
-}
 
 export default function DaySchedule(props) {
-  const todayDayOfWeek = new Date(Date.now()).getDay() - 1;
-  const isSameDayOfWeek = todayDayOfWeek === props.index;
-
   let schedule = [];
 
   schedule.push(<div className='schedule--day-name'>{WordDaysOfWeek[props.index]}</div>)

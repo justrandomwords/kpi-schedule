@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux';
 import firstWeekSchedule from '../data/firstWeekSchedule';
 import secondWeekSchedule from '../data/secondWeekSchedule';
 import { isFirstWeek } from './timeManage'
@@ -29,11 +28,11 @@ export function getSchedule() {
 export function getScheduleByIndex(weekIndex) {
   let scheduleName, scheduleData;
 
-  if (weekIndex == 0) {
+  if (weekIndex === 0) {
     scheduleName = 'Перший тиждень';
     scheduleData = firstWeekSchedule;
   }
-  else if (weekIndex == 1) {
+  else if (weekIndex === 1) {
     scheduleName = 'Другий тиждень';
     scheduleData = secondWeekSchedule;
   }
@@ -49,12 +48,12 @@ export function removeOptionalLessons(prevSchedule) {
   let optionalLesson = store.getState().settings.optionalLesson;
 
   if (optionalLesson === -1) {
-    const storageOptionalLesson = JSON.parse(localStorage.getItem('settings')).optional_lesson;
-
-    if (!storageOptionalLesson) 
+    try {
+      const storageOptionalLesson = JSON.parse(localStorage.getItem('settings'));
+      optionalLesson = storageOptionalLesson.optional_lesson;
+    } catch (error) {
       return prevSchedule;
-
-    optionalLesson = storageOptionalLesson;
+    }
   }
 
   const idOptionalLessons = lessonData

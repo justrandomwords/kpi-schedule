@@ -4,7 +4,7 @@ import arrowIcon from '../../../assets/icons/angle-left.svg'
 import MenuButton from '../MenuButton/MenuButton'
 import { useState } from 'react'
 import Settings from '../Settings/Settings'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { invertSettingsVisibility } from '../../../services/state/display/settingsVisibility'
 
 export default function Menu() {
